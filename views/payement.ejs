@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <title>FOOD AMOR EMPLOYEE HUB</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pay.css">
+
+</head>
+<script src="https://js.stripe.com/v3/"></script>
+
+<body >
+
+  
+
+
+  <form  method="POST">
+    <nav>
+      <a class="btn btn-default btn-sm" href="/">Home</a>
+      <a class="btn btn-default btn-sm" href="/feed">Store</a>
+      <a class="btn btn-default btn-sm" href="/finder">Local  Finder</a>
+
+    
+      </nav>
+    <input type="hidden" name="token" />
+    <div class="group">
+      <label>
+        <span>Card</span>
+        <div id="card-element" class="field"></div>
+      </label>
+    </div>
+    <div class="group">
+      <label>
+        <span>First name</span>
+        <input id="first-name" name="first-name" class="field" placeholder="Manoj" />
+      </label>
+      <label>
+        <span>Last name</span>
+        <input id="last-name" name="last-name" class="field" placeholder="Halugona" />
+      </label>
+    </div>
+    <div class="group">
+      <label>
+        <span>Address</span>
+        <input id="address-line1" name="address_line1" class="field" placeholder="77 Winchester Lane" />
+      </label>
+      <label>
+        <span>Address (cont.)</span>
+        <input id="address-line2" name="address_line2" class="field" placeholder="" />
+      </label>
+      <label>
+        <span>City</span>
+        <input id="address-city" name="address_city" class="field" placeholder="Coachella" />
+      </label>
+      <label>
+        <span>State</span>
+        <input id="address-state" name="address_state" class="field" placeholder="SA" />
+      </label>
+      <label>
+        <span>ZIP</span>
+        <input id="address-zip" name="address_zip" class="field" placeholder="92236" />
+      </label>
+      <label>
+       
+        <span>Country</span>
+        <select name="address_country" id="address-country" class="field">
+       
+          <option value="USA" selected>USA</option>
+        </select>
+      </label>
+    </div>
+    <button type="submit">Pay</button>
+    <div class="outcome">
+      <div class="error"></div>
+      <div class="success">
+        Success! Your Confirmation Number is <span class="token"></span> <br>
+        <span>Place Print or take ScreenShot of Confrimation Number for your pickup</span>
+      </div>
+    </div>
+  </form>
+  <script src="assets/js/payement.js"></script>
+
+</body>
+
+
+</html>
+
+<!-- No authentication (default U.S. card): 4242 4242 4242 4242.
+Authentication required: 4000 0027 6000 3184. -->

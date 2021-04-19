@@ -1,0 +1,175 @@
+<%- include('header'); -%>
+<head>
+  <title>Roulette</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="font-awesome.min.css"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<!-- </div> -->
+<body class="subpage">
+<div id="page-wrapper">
+
+  <!-- Header -->
+    <section id="header" >
+      <div class="container" style="height:55px;font-size: 18px;">
+        <img  src="img/foodlogo.png" id="logoI"></img>
+
+        <div class="row">
+          <div class="col-12" >
+
+        
+            
+
+            <!-- Nav -->
+              <nav id="nav"  style="height:55px;font-weight:bolder">
+          
+                <a href="/">Home</a>
+                <a href="/feed" id ="" >Store</a>
+                <a href="/finder" id ="" >Local Finder</a>
+                <a href="/logout" >Logout</a>
+
+              </nav>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Content -->
+    <section id="content">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 col-12-medium">
+
+            <!-- Sidebar -->
+            <section>
+             
+              <h2><span class="fa fa-heart"></span>Admin Profile</h2>
+
+              <ul style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="link-list">
+
+      
+            
+                <% if (user.local.email) { %>
+
+                  <br>
+                 <img style="height:250px" src="<%= user.profileImg %>" alt="">
+
+                  <li>
+                    Name: <%= user.name %><br>   
+                 </li>
+                 <li>
+                     Id: <%= user._id %><br>
+                 </li>
+                 
+                  <li  id="userName">
+                    Email: <%= user.local.email %><br>
+                </li>
+                <li>
+                     Password <%= user.local.password.substring(0,5) %>  
+                </li>                   
+
+          
+                  <a href="/unlink/local" class="btn btn-default">Unlink</a>
+              <% } else { %>
+                  <a href="/connect/local" class="btn btn-default">Connect Local</a>
+              <% } %>
+
+
+              
+               
+              </ul>
+            </section>
+            <section>
+               
+              
+      
+                <header>
+                  <h2>Sell</h2>
+                </header>
+                <p>
+                  <div class="postForm">
+                    <h2>Add a post to Sell</h2>
+                    <form action="/qpPost" enctype="multipart/form-data" method="post">
+  
+                      <textarea  placeholder="Share product name etc.!" name="caption" value=""></textarea>
+
+                      <input type="file" name="file-to-upload">
+                      <input type="submit" value="Upload">
+                    </form>
+                  </div>
+                </p>
+                <ul class="link-list" style= "font-weight:bolder;">
+                  <li>Please upload Picture & Information of Item</li>
+                  <li>Information Needs to include:</li>
+                  <li>Item Name,Price,Address,Restaurant Name</li>
+                  <li>You Can Include Anything You'll like if contains Nuts etc</li>
+                </ul>
+              </section>
+
+          </div>
+          <div class="col-9 col-12-medium imp-medium">
+
+            <!-- Main Content -->
+              <section class="container" >
+                <header>
+                  <h2>Item Sell Post</h2>
+                  <h3>Please Use Trash Icon to Delete Items No Longer For Sale </h3>
+                </header>
+                
+
+              
+                   <p>
+                      <ul style="grid-template-rows: auto;">
+                        <% for(var i=0; i<posts.length; i++) {%>
+                          <li style="width:33.33%;">
+                            <a href="/post/<%= posts[i]._id%>">
+                              <img style="height:250px;" src="<%= posts[i].imgPath%>">
+                            </a>
+                            <span> <%- posts[i].caption %></span>
+                            <span><i name="<%= posts[i]._id%>" class="fa fa-trash" aria-hidden="true"></i></span>
+                          </li>
+                        <% } %>
+                        </ul>
+            
+                      </p>
+                        
+                                
+                        
+                   
+              </section>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Footer -->
+    
+          <div >
+
+        
+  <!-- Copyright -->
+    <div id="copyright" >
+      <a href="https://github.com/Jasmin-L-Alvarez" class="icon brands fa fa-github"><span>Github</span></a>
+      <a href="https://twitter.com/DevJasmin" class="icon brands fa  fa-twitter"><span>Twitter</span></a>
+      <a href="https://www.linkedin.com/in/jasminlalvarez4/ target="_blank" class="fa fa-linkedin"><span>linkedin</span></a>
+
+    </div>
+
+
+<!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+
+
+
+ 
+<%- include('footer'); -%>

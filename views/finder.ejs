@@ -1,0 +1,47 @@
+<%- include('header'); -%>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Places Search Box</title>
+    <link rel="stylesheet" href="finder.css">
+   
+
+  </head>
+  <body>
+    <nav class="finderNav">
+
+    <div class="page-header text-center">
+
+      <h1>LOCAL FINDER </h1>  
+
+
+      <a href="/" class="btn btn-default btn-sm">Home</a>
+      <a class="btn btn-default btn-sm" href="/feed">Store</a>
+      <img  src="img/foodlogo.png" id="logoI"></img> 
+
+      
+
+    </div>
+  </nav>
+
+    <input
+      id="pac-input"
+      class="controls"
+      type="text"
+      placeholder="Search Box"
+    />
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKus4VyWFAjQPgcPtCeZLUt5xuNLqK-YM&callback=initAutocomplete&libraries=places&v=weekly"
+      async
+    ></script>
+  </body>
+  <script src="assets/js/api.js"></script>
+
+</html>
+
+
+

@@ -1,0 +1,131 @@
+<%- include('header'); -%>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+ 
+    <!-- <link rel="stylesheet" href="assets/css/stylestorecss.css" />     -->
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" href="assets/css/main.css" /> 
+   <link rel="stylesheet" href="style.css">
+   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> -->
+ <!-- CSS only -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
+
+
+  </head>
+ 
+
+<!-- Nav -->
+<nav  id="storeNav"class="navbar navbar-inverse bg-inverse fixed-top bg-faded">
+
+    
+  <div class="row ">
+    <div class ="col-nav">
+
+      
+      <a href="/">Home</a>
+      <a href="/feed" id ="" >Store</a>
+    </div>
+  </div>
+    <div id="cartI" class="col">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cart">Cart (<span class="total-count">
+      </span>)</button><button class="clear-cart btn btn-danger">Clear Cart</button></div>
+  
+      <img id="feedlogo" src="img/foodlogo.png" id="logoI"></img>
+
+ 
+</nav>
+
+
+<!-- Main -->
+<div class="container-2">
+  <div class="row" >
+
+  
+        <% for(var i=0; i<posts.length; i++) {%>
+        
+   
+              <a href="/post/<%= posts[i]._id%>">
+    
+             <img id="postS" src="<%= posts[i].imgPath%>"> </a>
+
+             <div>
+              <span><a class="user" href="/publicz/<%= posts[i].posterId%>">Restaurant </a></span>
+
+
+                <span class="cap"><%-posts[i].caption %></span>
+
+             
+              <a href="#" data-name="Food" data-price="5.00" class="add-to-cart btn btn-primary">Add to cart</a>
+            </div>
+    
+        <% } %>
+ 
+    </div>
+  <div class="modal " id="cart"  role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="false">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="show-cart table">
+            
+          </table>
+          <div>Total price: $<span class="total-cart"></span></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+         <a href="/payement" id ="payB" class="btn btn-default">Order now
+         </a>
+        </div>
+      </div>
+    </div>
+    </div> 
+</div>
+
+
+
+
+
+
+
+     <!-- Scripts -->
+        
+     <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script> 
+			<script src="assets/js/util.js"></script> 
+			<script src="assets/js/main.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+     <script src="assets/js/store.js"></script>
+  
+
+
+<%- include('footer'); -%>
+
+
+<!-- <% for(var i=0; i<posts.length; i++) {%>
+      <li class="liFeed">
+        <span><a class="user" href="/profile/<%= posts[i].posterId%>">user</span>
+        <a href="/post/<%= posts[i]._id%>">
+          <img src="<%= posts[i].imgPath%>">
+        </a>
+        <span class="cap"><%- posts[i].caption %></span>
+        
+      </li>
+    <% } %>
+    </ul> -->

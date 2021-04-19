@@ -1,0 +1,60 @@
+<%- include('header'); -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Public Profile</title>
+</head>
+<body style="background-color:#bdd1cfe3; font-size:18px;">
+  <div class="page-header text-center">
+
+    <h1 style="color:#3f9f22;">Restaurant Infromation</h1>
+
+
+    <a  class="btn btn-default " href="/feed">Store</a>
+
+    <!-- <a href="/logout" class="btn btn-default btn-sm">Logout</a> -->
+  </div>
+  <ul class="link-list" style="margin-left:38%;">
+
+    <% if (user.local.email) { %>
+     <p><strong>Restaurant name</strong>:FOOD CAFE <%= user.name %><br>
+     </p>
+     <strong>Address:</strong><address>122 N 10th St, Philadelphia, PA 19107</address> <%= user.address %><br>
+
+     <strong>Email</strong>:foodcafe@food.com<br>
+     <p><strong>Phone Number:</strong> 888-888-888</p>
+
+       
+  <% } %>
+ 
+  <!-- <ul class="postUl" style="list-style-type: none;height: 250px;margin-left:38%;margin-top:-15%;">
+    <% for(var i=0; i<posts.length; i++) {%>
+      <li style="font-size:18px;font-weight: bolder;">
+      <span><a class="user" href="/profile/<%= posts[i].posterId%>">Restaurant </a></span>
+
+        <img class="postImg" style="height:300px;"  src="../<%= posts[i].imgPath%>">
+        
+        <%- posts[i].caption %>
+  
+      </li>
+  
+    
+        <a href="/payement" id ="" class="btn btn-default"> Order now
+        </a>
+      </form>
+   
+    <% } %>
+  </ul> -->
+  
+  
+</body>
+</html>
+
+ 
+
+ 
+<%- include('footer'); -%>

@@ -1,0 +1,11 @@
+ 
+      html,
+      body {
+        height: 85%;
+        margin: 0;
+        padding: 0;
+        background-color:#63bbb2e3;
+      }
+      .postUl{
+        color:aqua;
+      }

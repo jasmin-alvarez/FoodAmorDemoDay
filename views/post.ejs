@@ -1,0 +1,50 @@
+<%- include('header'); -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOOD Item</title>
+</head>
+<body style="background-color:#bbddda;color:#3f9f22;font-family:'Franklin Gothic Medium';font-size:25px;">
+  <div class="page-header text-center">
+    <h1 class="feedTitle"><span class="fa fa-heart-o"></span> Food Item</h1>
+    <a class="btn btn-default" href="/feed">Store</a>
+    <a class="btn btn-default " href="/profile">Profile</a>
+    <a href="/logout" class="btn btn-default ">Logout</a>
+  </div>
+  <div class="container" >
+  
+    <div class="row">
+  
+        <!-- LOCAL INFORMATION -->
+        
+        <div >
+          <ul  style="list-style-type:none;margin-left:35%">
+          <% for(var i=0; i<posts.length; i++) {%>
+            <li>
+              <a href="/post/<%= posts[i]._id%>">
+                <img style="height:300px;" src="/<%= posts[i].imgPath%>">      
+              </a>
+              <span> <%- posts[i].caption %></span>
+  
+              <a href="/payement" id ="payB" class="btn btn-default">Order now
+              </a>
+             
+                <!-- <span><a class="user" href="/profile/<%= posts[i].posterId%>">Restaurant </a></span> -->
+  
+              
+         
+            </li>
+          <% } %>
+          </ul>
+  
+  
+       
+  
+  </div>
+</body>
+</html>
+
+<%- include('footer'); -%>
