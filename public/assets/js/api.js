@@ -17,6 +17,7 @@ function initAutocomplete() {
     searchBox.setBounds(map.getBounds());
   });
   let markers = [];
+  
   // Listen for the event fired when the user selects a prediction and retrieve
   // more details for that place.
   searchBox.addListener("places_changed", () => {
@@ -30,7 +31,7 @@ function initAutocomplete() {
       marker.setMap(null);
     });
     markers = [];
-    // For each place, get the icon, name and location.
+    // For each place,... get the icon, name and location.
     const bounds = new google.maps.LatLngBounds();
     places.forEach((place) => {
       if (!place.geometry || !place.geometry.location) {

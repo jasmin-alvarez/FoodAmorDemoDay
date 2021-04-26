@@ -1,11 +1,12 @@
 <%- include('header'); -%>
 <head>
-  <title>Roulette</title>
+  <title>FOOD AMOR</title>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <!-- <link rel="stylesheet" href="font-awesome.min.css"> -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="assets/css/main.css" />
+
 </head>
 
 <!-- </div> -->
@@ -24,7 +25,7 @@
             
 
             <!-- Nav -->
-              <nav id="nav"  style="height:55px;font-weight:bolder">
+              <nav id="nav"  >
           
                 <a href="/">Home</a>
                 <a href="/feed" id ="" >Store</a>
@@ -49,33 +50,33 @@
              
               <h2><span class="fa fa-heart"></span>Admin Profile</h2>
 
-              <ul style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="link-list">
+              <ul  style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif" class="link-list">
 
       
             
                 <% if (user.local.email) { %>
 
                   <br>
-                 <img style="height:250px" src="<%= user.profileImg %>" alt="">
+                 <img id="show" style="height:225px" src="<%= user.profileImg %>" alt="">
 
-                  <li>
+                  <li class ="hidden">
                     Name: <%= user.name %><br>   
                  </li>
-                 <li>
+                 <li class ="hidden">
                      Id: <%= user._id %><br>
                  </li>
                  
-                  <li  id="userName">
+                  <li class ="hidden"  id="userName">
                     Email: <%= user.local.email %><br>
                 </li>
-                <li>
+                <li class ="hidden">
                      Password <%= user.local.password.substring(0,5) %>  
                 </li>                   
 
           
-                  <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                  <a class ="hidden" href="/unlink/local" class="btn btn-default">Unlink</a>
               <% } else { %>
-                  <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                  <a class="hidden" href="/connect/local" class="btn btn-default">Connect Local</a>
               <% } %>
 
 
@@ -102,7 +103,7 @@
                     </form>
                   </div>
                 </p>
-                <ul class="link-list" style= "font-weight:bolder;">
+                <ul class="link-list" style= "width: 25%;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                   <li>Please upload Picture & Information of Item</li>
                   <li>Information Needs to include:</li>
                   <li>Item Name,Price,Address,Restaurant Name</li>

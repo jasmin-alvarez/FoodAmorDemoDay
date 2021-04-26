@@ -5,23 +5,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+
 
   <title>Public Profile</title>
 </head>
-<body style="background-color:#bdd1cfe3; font-size:18px;">
-  <div class="page-header text-center">
+<body class="rBody" style="background-image : url('https://cdn1.vectorstock.com/i/1000x1000/03/40/green-heart-pattern-seamless-vector-14850340.jpg');"
+ >
 
-    <h1 style="color:#3f9f22;">Restaurant Infromation</h1>
+  <div class="page-header text-center" style="font-size: 1.5em;">
+
+    <h1 style="color:#3f9f22;font-family: 'Franklin Gothic Medium';font-size:3.0 em ; ">Restaurant Infromation</h1>
 
 
-    <a  class="btn btn-default " href="/feed">Store</a>
+    <a  class="btn btn-default " style="border:2px solid #3db0a671;font-size: 1.0em; font-family:'Franklin Gothic Medium'; background-color:rgba(169, 252, 206, 0.753);
+    color:#3f9f22" href="/feed">Store</a>
 
-    <!-- <a href="/logout" class="btn btn-default btn-sm">Logout</a> -->
+    
   </div>
-  <ul class="link-list" style="margin-left:38%;">
+  <ul class="link-list" style="border:3px solid #3db0a671;width:30%;margin-left:35%;font-family: 'Franklin Gothic Medium';font-size: 1.5em;background-color:rgba(169, 252, 206, 0.753);
+  color:#3f9f22">
 
     <% if (user.local.email) { %>
-     <p><strong>Restaurant name</strong>:FOOD CAFE <%= user.name %><br>
+     <p><strong>Restaurant name</strong>: FOOD CAFE <%= user.name %><br>
      </p>
      <strong>Address:</strong><address>122 N 10th St, Philadelphia, PA 19107</address> <%= user.address %><br>
 

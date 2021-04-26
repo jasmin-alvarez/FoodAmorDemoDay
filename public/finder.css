@@ -11,7 +11,13 @@
         height: 85%;
         margin: 0;
         padding: 0;
-        background-color:#bdd1cfbd;
+        /* background-color:#bdd1cfbd; */
+        
+      }
+      body {
+        background-image : url("https://cdn1.vectorstock.com/i/1000x1000/03/40/green-heart-pattern-seamless-vector-14850340.jpg");
+        /* background-repeat: no-repeat;
+        background-size: cover; */
       }
      
       #description {
@@ -88,7 +94,7 @@
 
       h1,.page-header {
          text-align: center;
-         padding-bottom:25px;
+         border:none;
       }
 
       h1{
@@ -98,11 +104,19 @@
       }
 
       .finderNav a {
-       background-color: #5b90976e;
+       /* background-color: #5b90976e;
        border:3px solid #4d91fe9a;
        color:#28790d;
        font-weight: bolder;
        font-size:18px;
+       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+       background-color:rgba(169, 252, 248, 0.753);
+       border: 2px solid #3db0a671;
+       color: #3f9522;
+     
+       text-decoration: none;
+       font-size: 1.4em;
+       outline: 0;
        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       }
 

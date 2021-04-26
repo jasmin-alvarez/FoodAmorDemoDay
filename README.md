@@ -1,5 +1,5 @@
 
-![quickpound](qpfront.png)
+<!-- ![quickpound](qpfront.png) -->
 
 ## Installation
 

@@ -1,3 +1,5 @@
+// STRIPE API 
+
 "use strict";
 
 var stripe = Stripe('pk_test_51IfdITEOiwnwvfU2IPdzwcXxZpsb83hAGYiR6W4KzMYBgnKScBI2XapUOh6VfMvdAfO93fLmX7I34g4gxFtkAhwh00ojN8QYo2');
@@ -29,7 +31,8 @@ function setOutcome(result) {
   if (result.token) {
     // In this example, we're simply displaying the token
     successElement.querySelector('.token').textContent = result.token.id.substring(4);
-    successElement.classList.add('visible'); // In a real integration, you'd submit the form with the token to your backend server
+    successElement.classList.add('visible');
+    
     // var form = document.querySelector('form');
     // form.querySelector('input[name="token"]').setAttribute('value', result.token.id);
     // form.submit();

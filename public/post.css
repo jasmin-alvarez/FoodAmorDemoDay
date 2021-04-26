@@ -5,6 +5,10 @@
         margin: 0;
         padding: 0;
         background-color:#63bbb2e3;
+        background-image : url("https://cdn3.vectorstock.com/i/1000x1000/70/12/seamless-pattern-background-with-green-hearts-vector-20607012.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
       .postUl{
         color:aqua;

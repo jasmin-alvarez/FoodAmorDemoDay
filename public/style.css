@@ -1,5 +1,7 @@
 #bannerimg{
-  width:80%
+  width:80%;
+  /* background-color:rgba(144, 238, 144, 0.349); */
+
 } 
 .smallSq{
   height:25%;
@@ -8,17 +10,21 @@
 #logoI{
   position: absolute;
 	left: 2px;
-	bottom: 38px;
-  height:50px;
+	bottom: 35px;
+  height:60px;
+  /* border:3px solid black; */
+  background-color:rgba(169, 252, 206, 0.753);
+  border-radius: 25%;
 }
 body{
   padding-top:80px;
   word-wrap:break-word;
-  /* background-image: url("https://static.storyweaver.org.in/illustrations/46269/search/58.jpg");
+  background-image : url("https://cdn1.vectorstock.com/i/1000x1000/03/40/green-heart-pattern-seamless-vector-14850340.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
-*/
+
+
 }
 .jumbotron {
   width:50%;
@@ -31,13 +37,24 @@ body{
 .btn-default, .btn, .submit{
   
   background-color: #3db0a671;
-  color: #3f9f22;
   font-size: 20px;
   margin:2%;
   /* text-shadow: -1px -1px 1px #3f9f22; */
-  font-weight:bolder;
+  /* font-weight:bolder;
+  text-decorati on: none;
+  border: 2px solid #3db0a671;*/
+  background-color:rgba(169, 252, 206, 0.753);
+  border: 2px solid #3db0a671;
+  color: #3f9522;
+
   text-decoration: none;
-  border: 2px solid #3db0a671; 
+  font-size: 1.4em;
+  outline: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* background-color:rgba(144, 238, 144, 0.349); */
+  border-radius: 25%;
+  /* color:#3ba39bfa; */
+  
 }
 #profileBg {
   background: rgb(250, 248, 135);
@@ -47,6 +64,8 @@ body{
 
 .col-sm-6{
   margin-left:30%;
+  color:#3db0a7 ;
+
   
 }
 
@@ -206,13 +225,28 @@ font-weight: bolder;
   border: solid 1px #1d5a79 ;
   box-shadow: inset 0px 1px 0px 0px #4d8591;
   background-color: #4d85916b;
-  color: #3f9522;
+  /* color: #3f9522; */
+  color:#3db0a7 ;
+/* 
   font-size: 15px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight:bolder;
+  font-weight:bolder; */
+
+
+  background-color: rgba(169, 252, 206, 0.753);
+    border: 2px solid #3db0a671;
+    color: #3f9522;
+    text-decoration: none;
+    font-size: 1.4em;
+    /* margin-left: 60px; */
+    outline: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* background-color: rgba(144, 238, 144, 0.349); */
+    border-radius: 25%;
+    /* color: #3ba39bfa; */
+}
 
   /* background-color: #e1e6d4; */
-}
 
 #feedlogo{
   float:right;
@@ -221,4 +255,37 @@ font-weight: bolder;
 
 #storeNav{
   background-color: #afe6e1c9;
+  border: solid 3px #3db0a7 ;
+
+
 }
+
+.input-group>.form-control {
+  position: relative;
+   top: 15px;
+   text-align: center;
+   flex:auto;
+ }
+
+ #minus,#plus{
+   margin:2%;
+ }
+
+ .modal-footer .btn+.btn {
+   margin:0;
+ }
+
+/* Resturant information  */
+.rBody{
+background-image : url("https://cdn3.vectorstock.com/i/1000x1000/70/12/seamless-pattern-background-with-green-hearts-vector-20607012.jpg");
+/* background-repeat: no-repeat;
+background-size: cover;
+background-repeat: no-repeat; */
+}
+/* profile  */
+#hidden {
+  display:none;
+}
+
+
+

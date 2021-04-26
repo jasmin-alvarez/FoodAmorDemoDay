@@ -33,7 +33,9 @@ module.exports = function (app, passport, db, multer, ObjectId) {
   });
   app.get('/post', function (req, res) {
     res.render('post.ejs');
-  }); // ADMIN  PROFILE SECTION =========================
+  });
+  
+  // ADMIN  PROFILE SECTION =========================
 
   app.get('/profile', isLoggedIn, function (req, res) {
     var uId = ObjectId(req.session.passport.user);
