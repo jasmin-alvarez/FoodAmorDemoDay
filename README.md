@@ -1,5 +1,5 @@
 
-![Photo](front-page.png)
+<h1>Home Page</h>![Photo](front-page.png)
 ![Photo2](RestaurantProfile.png)
 
 
