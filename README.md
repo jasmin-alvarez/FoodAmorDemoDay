@@ -1,4 +1,8 @@
 
+![Photo](front-page.png)
+![Photo2](RestaurantProfile.png)
+
+
 
 ## Installation
 
