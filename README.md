@@ -2,7 +2,7 @@
 Full Stack Application that is meant to connect customers with local restaurants to give them the chance to buy leftover meals at a steep discount.
 
 ## Heroku Link
-https://food-amor.herokuapp.com/
+https://foodamor.herokuapp.com/
 
 ### Tech Used: HTML , CSS , JS , Node.js , MongoDB , Multer , Express , EJS, Google Maps API,Stripe API
 
