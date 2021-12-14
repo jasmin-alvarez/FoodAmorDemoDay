@@ -1,5 +1,5 @@
 
-var stripe = Stripe('pk_test_51IfdITEOiwnwvfU2IPdzwcXxZpsb83hAGYiR6W4KzMYBgnKScBI2XapUOh6VfMvdAfO93fLmX7I34g4gxFtkAhwh00ojN8QYo2');
+var stripe = Stripe('pk_test_key);
 var elements = stripe.elements();
 
 var card = elements.create('card', {
